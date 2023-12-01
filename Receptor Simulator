@@ -1,0 +1,52 @@
+#include <LiquidCrystal.h>
+
+int backlight = 13;  // Adicione a declaração do pino backlight
+LiquidCrystal lcd(12, 11, 10, 5, 4, 3, 2);
+
+void setup() {
+  pinMode(backlight, OUTPUT);
+  Serial.begin(9600);
+  lcd.begin(16,2);
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    String paciente = Serial.readStringUntil('\n');
+    if (paciente == "01") {
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("Numero pacientes:");
+      lcd.setCursor(0, 1);
+      lcd.print(paciente);
+    }
+    if (paciente == "02") {
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("Numero pacientes:");
+      lcd.setCursor(0, 1);
+      lcd.print(paciente);
+    }
+    if (paciente == "03") {
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("Numero pacientes:");
+      lcd.setCursor(0, 1);
+      lcd.print(paciente);
+    }
+    if (paciente == "04") {
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("Numero pacientes:");
+      lcd.setCursor(0, 1);
+      lcd.print(paciente);
+    }
+    if (paciente == "05") {
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("Numero pacientes:");
+      lcd.setCursor(0, 1);
+      lcd.print(paciente);
+    }
+  }
+
+}
