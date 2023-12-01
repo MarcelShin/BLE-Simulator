@@ -1,0 +1,18 @@
+#define tmp 2000
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  Serial.write("01");
+  delay(tmp);
+  Serial.write("02");
+  delay(tmp);
+  Serial.write("03");
+  delay(tmp);
+  Serial.write("04");
+  delay(tmp);
+  Serial.write("05");
+  delay(tmp);
+}
